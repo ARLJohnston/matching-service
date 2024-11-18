@@ -1,6 +1,6 @@
 # Matching Service for UofG SPA
 
-This server, built using FastAPI, is dedicated to processing allocation data and returning results using a specialized matching algorithm. It is designed exclusively to support the `allocation-app` project. A web platform for Student Project Allocation management.
+This server, built using FastAPI, is dedicated to processing allocation data and returning results using a specialized matching algorithm. It is designed exclusively to support the `spa` project. A web platform for handling Student Project Allocation.
 
 
 ## Tech Stack
