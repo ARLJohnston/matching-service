@@ -1,12 +1,11 @@
 FROM tiangolo/uvicorn-gunicorn-fastapi:python3.9
+COPY --from=ghcr.io/astral-sh/uv:latest /uv /uvx /bin/
 
 WORKDIR /app
+COPY . .
 
-COPY requirements.txt .
-RUN pip install --upgrade pip
-RUN pip install -r requirements.txt
-
-COPY . /app
+RUN uv python install
+RUN uv sync frozen
 
 RUN adduser --disabled-password --gecos "" myuser
 USER myuser
