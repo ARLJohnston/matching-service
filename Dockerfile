@@ -1,11 +1,13 @@
 FROM tiangolo/uvicorn-gunicorn-fastapi:python3.9
+LABEL org.opencontainers.image.source="https://github.com/pkitazos/matching-service"
+
 COPY --from=ghcr.io/astral-sh/uv:latest /uv /uvx /bin/
 
 WORKDIR /app
 COPY . .
 
 RUN uv python install
-RUN uv sync frozen
+RUN uv sync --frozen
 
 RUN adduser --disabled-password --gecos "" myuser
 USER myuser
