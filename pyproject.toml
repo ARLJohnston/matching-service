@@ -8,8 +8,8 @@ dependencies = [
     "amply==0.1.6",
     "docutils==0.20.1",
     "fastapi[standard]>=0.115.5",
-    "numpy==1.25.0",
-    "pulp==2.7.0",
-    "pyparsing==3.1.1",
-    "uvicorn"
+    "numpy==1.26.4",
+    "PuLP==2.9.0",
+    "pyparsing==3.1.4",
+    "uvicorn",
 ]
