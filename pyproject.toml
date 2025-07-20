@@ -9,7 +9,7 @@ dependencies = [
     "docutils==0.20.1",
     "fastapi[standard]>=0.115.5",
     "numpy==1.26.4",
-    "pulp==2.9.0",
+    "PuLP==2.9.0",
     "pyparsing==3.1.4",
     "uvicorn",
 ]
