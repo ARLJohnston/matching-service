@@ -5,7 +5,8 @@ from src.server_response import ServerResponse
 from src.solver_args import Args
 from src.request_data import RequestData, RequestDataWithArgs
 from src.server_data import ServerData
-
+from src.rpa_types import RpaMatchingInput, RpaMatchingOutput
+from src.reader_allocation_alg_v2 import allocate_readers_with_capacity_hard
 
 app = FastAPI()
 
@@ -79,3 +80,8 @@ async def greedy_generous(data: RequestData):
 
     response = process_matching_result(status, result, processing_data)
     return response.to_json()
+
+
+@app.post("/rpa")
+async def rpa(data: RpaMatchingInput) -> RpaMatchingOutput:
+    return allocate_readers_with_capacity_hard(data)
